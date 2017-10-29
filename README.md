@@ -1,2 +1,2 @@
-# js-starter-kit
-Personal starter kit for javascript projects
+# node-webapp-starter-kit
+Starter kit for node web applications

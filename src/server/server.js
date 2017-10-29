@@ -34,14 +34,14 @@ const winstonOptions = {
   colorize: !config.env.isDeployed(),
 };
 
+if (config.env.isDevelopment) {
+  winstonOptions.requestWhitelist = ['url', 'method', 'originalUrl', 'query'];
+}
+
 if (config.env.isDeployed()) {
   expressWinston.requestWhitelist.push('body');
   expressWinston.responseWhitelist.push('body');
   app.use(expressWinston.logger(winstonOptions));
-}
-
-if (config.env.isDevelopment) {
-  winstonOptions.requestWhitelist = ['url', 'method', 'originalUrl', 'query'];
 }
 
 app.use(express.static(path.join(process.cwd(), '/public')));
@@ -64,8 +64,8 @@ app.use((req, res, next) => {
 app.use((err, req, res, next) => {
   logger.error(`Rendering error: ${JSON.stringify(err)}`);
   // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = config.env.isProduction() ? {} : err;
+  // res.locals.message = err.message;
+  // res.locals.error = config.env.isProduction() ? {} : err;
 
   // render the error page
   res.status(err.status || httpStatus.INTERNAL_SERVER_ERROR);
@@ -74,13 +74,14 @@ app.use((err, req, res, next) => {
     message: err.message,
     error: config.env.isProduction() ? {} : err,
     status: err.status,
+    correlationId: req.correlationId ? req.correlationId() : null,
   });
 });
 
 function normalizePort(val) {
   const port = parseInt(val, 10);
 
-  if (isNaN(port)) {
+  if (Number.isNaN(port)) {
     // named pipe
     return val;
   }

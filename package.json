@@ -1,8 +1,10 @@
 {
   "name": "node-webapp-starter-kit",
   "version": "1.0.0",
-  "description": "Personal starter kit for javascript projects",
-  "main": "index.js",
+  "engines": {
+    "node": ">=8.6.0"
+  },
+  "description": "Starter kit for node web applications",
   "scripts": {
     "postinstall": "npm rebuild node-sass",
     "start": "node ./bin/server",
@@ -28,9 +30,9 @@
     "type": "git",
     "url": "git+https://github.com/pooleparty/node-webapp-starter-kit.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["node", "webapp", "react", "boilerplate", "starter"],
+  "author": "pooleparty",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/pooleparty/node-webapp-starter-kit/issues"
   },

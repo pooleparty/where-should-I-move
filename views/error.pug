@@ -1,6 +1,7 @@
 extends layout
 
 block content
-  h2(t2-fluid)= message
-  h3(t3-fluid)= error.status
-      p(t3-fluid) #{error.stack}
+  h1 An error has occurred
+  h2 #{message}
+  pre #{error.stack}
+  small RequestId: #{correlationId}
