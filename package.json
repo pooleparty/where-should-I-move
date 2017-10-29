@@ -30,7 +30,13 @@
     "type": "git",
     "url": "git+https://github.com/pooleparty/node-webapp-starter-kit.git"
   },
-  "keywords": ["node", "webapp", "react", "boilerplate", "starter"],
+  "keywords": [
+    "node",
+    "webapp",
+    "react",
+    "boilerplate",
+    "starter"
+  ],
   "author": "pooleparty",
   "license": "MIT",
   "bugs": {
@@ -72,6 +78,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.4.0",
     "extract-text-webpack-plugin": "^3.0.2",
+    "husky": "^0.14.3",
     "jest": "^21.2.1",
     "node-sass": "^4.5.3",
     "nodemon": "^1.12.1",
