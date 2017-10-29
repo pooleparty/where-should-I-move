@@ -1,0 +1,6 @@
+.eslintrc.js
+.stylelintrc.js
+bin/
+coverage/
+public/
+src/client/

@@ -1,0 +1,6 @@
+extends layout
+
+block content
+  h2(t2-fluid)= message
+  h3(t3-fluid)= error.status
+      p(t3-fluid) #{error.stack}

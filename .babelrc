@@ -1,0 +1,16 @@
+{
+  "plugins": ["transform-object-rest-spread"],
+  "presets": ["react", "env"],
+  "env": {
+    "node": {
+      "plugins": [
+        [
+          "babel-plugin-transform-require-ignore",
+          {
+            "extensions": [".css", ".scss"]
+          }
+        ]
+      ]
+    }
+  }
+}

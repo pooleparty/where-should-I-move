@@ -1,0 +1,11 @@
+{
+  "delay": 2000,
+  "ignore": [
+    "bin/",
+    "src/server/__tests__/",
+    "src/client/"
+  ],
+  "watch": [
+    "src/"
+  ]
+}
