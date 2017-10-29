@@ -21,7 +21,8 @@
     "dev:server:debug": "NODE_DEBUG_OPTION='--inspect' npm run dev:server",
     "predev:client": "npm run build:server",
     "dev:client": "BABEL_ENV=client webpack --watch",
-    "dev:style": "npm run build:style -- --watch"
+    "validate": "run-p -c lint test",
+    "prepush": "npm run validate"
   },
   "repository": {
     "type": "git",
