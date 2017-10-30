@@ -4,14 +4,17 @@ FROM node:8.6-alpine
 ENV NPM_CONFIG_LOGLEVEL warn
 
 # export listening port
-ENV PORT 3007
-EXPOSE $PORT
+EXPOSE 3001
 
 WORKDIR /opt/code
 
-COPY package.json .npmrc ./
+COPY package.json ./
+COPY package-lock.json ./
+
 RUN npm install
+
 COPY . .
+
 RUN npm run build
 
 CMD ["npm", "start"]
