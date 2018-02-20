@@ -3,11 +3,11 @@ import correlator from 'express-correlation-id';
 import config from '../config';
 
 const addCorrelationId = (level, msg, meta) =>
-  Object.assign({ }, meta, { correlationId: correlator.getId() });
+  Object.assign({}, meta, { correlationId: correlator.getId() });
 
-const logger = new (winston.Logger)({
+const logger = new winston.Logger({
   transports: [
-    new (winston.transports.Console)({
+    new winston.transports.Console({
       json: config.env.isDeployed(),
       stringify: config.env.isDeployed(),
       timestamp: true,

@@ -36,37 +36,32 @@ const baseConfig = {
         test: /\.scss$/,
         use: extractTextPluginConfig.extract({
           fallback: 'style-loader',
-          use: [
-            'css-loader',
-            'postcss-loader',
-            'sass-loader',
-          ],
+          use: ['css-loader', 'postcss-loader', 'sass-loader'],
         }),
       },
     ],
   },
-  plugins: [
-    extractTextPluginConfig,
-  ],
+  plugins: [extractTextPluginConfig],
 };
 
-const envConfig = new Proxy({
-  dev: {},
-  dist: {
-    devtool: false,
-    plugins: [
-      productionEnvPlugin,
-    ],
+const envConfig = new Proxy(
+  {
+    dev: {},
+    dist: {
+      devtool: false,
+      plugins: [productionEnvPlugin],
+    },
   },
-}, {
-  // Proxy will force dev configuration to be returned
-  // if no matching environment found
-  get(target, name) {
-    if (target[name]) {
-      return target[name];
-    }
-    return target.dev;
+  {
+    // Proxy will force dev configuration to be returned
+    // if no matching environment found
+    get(target, name) {
+      if (target[name]) {
+        return target[name];
+      }
+      return target.dev;
+    },
   },
-});
+);
 
 module.exports = env => merge(baseConfig, envConfig[env]);
