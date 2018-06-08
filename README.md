@@ -1,13 +1,10 @@
-# Node Web App Starter Kit
+# Where should I move
 
-## Opinionated starter kit for node web applications
+## a tool to help you figure out where to move
 
-Technologies:
-- ES6
-- Babel
-- Express
-- Webpack
-- React
-- Bootstrap
-- SCSS
-- Docker
+Data to provide:
+
+- School data
+- Housing data
+- Demographic data
+- Job and income data
