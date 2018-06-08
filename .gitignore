@@ -1,4 +1,6 @@
-.vscode
+.eslintcache
+.env
 node_modules
 bin
 public/bundles
+coverage

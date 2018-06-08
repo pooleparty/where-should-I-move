@@ -25,7 +25,7 @@ const config = {
   logging: {
     level: getLoggingLevel(),
   },
-  port: process.env.PORT || 3001,
+  port: process.env.PORT,
 };
 
 export default config;
