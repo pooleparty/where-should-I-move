@@ -1,10 +1,10 @@
 {
-  "name": "node-webapp-starter-kit",
+  "name": "where-should-i-move",
   "version": "1.0.0",
   "engines": {
     "node": ">=8.11.2"
   },
-  "description": "Starter kit for node web applications",
+  "description": "Tool to help you figure out where to move",
   "scripts": {
     "postinstall": "npm rebuild node-sass",
     "start": "node ./bin/server",
@@ -32,7 +32,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pooleparty/node-webapp-starter-kit.git"
+    "url": "git+https://github.com/pooleparty/where-should-i-move.git"
   },
   "keywords": [
     "node",
@@ -44,9 +44,9 @@
   "author": "pooleparty",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pooleparty/node-webapp-starter-kit/issues"
+    "url": "https://github.com/pooleparty/where-should-i-move/issues"
   },
-  "homepage": "https://github.com/pooleparty/node-webapp-starter-kit#readme",
+  "homepage": "https://github.com/pooleparty/where-should-i-move#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "classnames": "^2.2.6",
